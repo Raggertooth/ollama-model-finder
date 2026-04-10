@@ -260,7 +260,7 @@ function getQuantizationForChip(chip) {
 async function fetchModels() {
     try {
         stats.textContent = 'Loading models from backend...';
-        const response = await fetch('http://localhost:3000/api/models');
+        const response = await fetch('/api/models');
         if (!response.ok) throw new Error('API error');
         const data = await response.json();
         if (!data.success) throw new Error(data.error || 'API returned error');
@@ -548,7 +548,7 @@ function renderModels() {
                 if (container.innerHTML === '') {
                     container.innerHTML = '<div class="loading">Loading...</div>';
                     try {
-                        const resp = await fetch(`http://localhost:3000/api/quantizations/${modelName}`);
+                        const resp = await fetch(`/api/quantizations/${modelName}`);
                         const data = await resp.json();
                         if (data.success) {
                             container.innerHTML = renderQuantOptions(data.quantizations);
