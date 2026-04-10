@@ -7,7 +7,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; // Railway sets PORT automatically; fallback to 3000 locally
 const CACHE_FILE = path.join(__dirname, 'cache.json');
 const CACHE_TTL_MS = 15 * 60 * 1000; // 15 minutes
 
