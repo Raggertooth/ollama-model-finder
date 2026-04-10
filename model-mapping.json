@@ -1,0 +1,190 @@
+{
+  "ramTiers": [
+    {
+      "ramGB": 16,
+      "description": "Entry-level laptop/integrated graphics",
+      "recommendedQuantization": "Q4_K_M",
+      "parameterRange": {
+        "min": 1,
+        "max": 7,
+        "unit": "Billion parameters"
+      },
+      "exampleModels": [
+        "llama3.2:1b",
+        "llama3.2:3b",
+        "phi4:14b",
+        "mistral:7b",
+        "qwen2.5:7b"
+      ],
+      "useCases": {
+        "chat": {
+          "description": "General conversation & assistant tasks",
+          "recommended": ["llama3.2:3b", "mistral:7b", "qwen2.5:7b"],
+          "minQuantization": "Q4"
+        },
+        "coding": {
+          "description": "Code generation & debugging",
+          "recommended": ["deepseek-coder:6.7b", "qwen2.5-coder:7b"],
+          "minQuantization": "Q4"
+        },
+        "reasoning": {
+          "description": "Complex reasoning & math",
+          "recommended": ["qwen2.5:7b", "mistral:7b"],
+          "minQuantization": "Q5"
+        },
+        "vision": {
+          "description": "Image understanding",
+          "recommended": ["llava:7b", "llama3.2-vision:11b"],
+          "minQuantization": "Q4",
+          "note": "Vision models require more RAM"
+        }
+      }
+    },
+    {
+      "ramGB": 24,
+      "description": "Mid-range workstation/gaming laptop",
+      "recommendedQuantization": "Q4_K_M",
+      "parameterRange": {
+        "min": 8,
+        "max": 14,
+        "unit": "Billion parameters"
+      },
+      "exampleModels": [
+        "llama3.2:7b",
+        "llama3.2:11b",
+        "qwen2.5:14b",
+        "mistral:22b",
+        "deepseek-llm:14b"
+      ],
+      "useCases": {
+        "chat": {
+          "description": "General conversation & assistant tasks",
+          "recommended": ["llama3.2:7b", "qwen2.5:14b", "mistral:22b"],
+          "minQuantization": "Q4"
+        },
+        "coding": {
+          "description": "Code generation & debugging",
+          "recommended": ["deepseek-coder:14b", "qwen2.5-coder:14b", "llama3.1:8b"],
+          "minQuantization": "Q4"
+        },
+        "reasoning": {
+          "description": "Complex reasoning & math",
+          "recommended": ["deepseek-llm:14b", "qwen2.5:14b"],
+          "minQuantization": "Q5"
+        },
+        "vision": {
+          "description": "Image understanding",
+          "recommended": ["llama3.2-vision:11b", "llava:13b"],
+          "minQuantization": "Q4",
+          "note": "Vision models require more RAM"
+        }
+      }
+    },
+    {
+      "ramGB": 32,
+      "description": "High-end workstation/developer machine",
+      "recommendedQuantization": "Q5_K_M",
+      "parameterRange": {
+        "min": 20,
+        "max": 35,
+        "unit": "Billion parameters"
+      },
+      "exampleModels": [
+        "llama3.1:70b",
+        "qwen2.5:32b",
+        "mistral-large",
+        "deepseek-v2.5:34b",
+        "command-r-plus:35b"
+      ],
+      "useCases": {
+        "chat": {
+          "description": "General conversation & assistant tasks",
+          "recommended": ["llama3.1:70b", "qwen2.5:32b", "mistral-large"],
+          "minQuantization": "Q4"
+        },
+        "coding": {
+          "description": "Code generation & debugging",
+          "recommended": ["deepseek-coder:33b", "qwen2.5-coder:32b"],
+          "minQuantization": "Q4"
+        },
+        "reasoning": {
+          "description": "Complex reasoning & math",
+          "recommended": ["deepseek-llm:33b", "qwen2.5:32b", "mistral-large"],
+          "minQuantization": "Q5"
+        },
+        "vision": {
+          "description": "Image understanding",
+          "recommended": ["llava-llama3:70b", "llama3.2-vision:90b"],
+          "minQuantization": "Q4",
+          "note": "Vision models require more RAM"
+        }
+      }
+    },
+    {
+      "ramGB": 64,
+      "description": "Server-class/workstation with GPU",
+      "recommendedQuantization": "Q6_K",
+      "parameterRange": {
+        "min": 34,
+        "max": 70,
+        "unit": "Billion parameters"
+      },
+      "exampleModels": [
+        "llama3.1:405b",
+        "qwen2.5:72b",
+        "mixtral:8x22b",
+        "command-r-plus:35b",
+        "deepseek-v3:37b"
+      ],
+      "useCases": {
+        "chat": {
+          "description": "General conversation & assistant tasks",
+          "recommended": ["llama3.1:405b", "qwen2.5:72b", "mixtral:8x22b"],
+          "minQuantization": "Q4"
+        },
+        "coding": {
+          "description": "Code generation & debugging",
+          "recommended": ["deepseek-coder-v2:37b", "qwen2.5-coder:32b"],
+          "minQuantization": "Q4"
+        },
+        "reasoning": {
+          "description": "Complex reasoning & math",
+          "recommended": ["deepseek-llm:67b", "qwen2.5:72b", "mixtral:8x22b"],
+          "minQuantization": "Q5"
+        },
+        "vision": {
+          "description": "Image understanding",
+          "recommended": ["llava-llama3:405b"],
+          "minQuantization": "Q4",
+          "note": "Vision models require significantly more RAM"
+        }
+      }
+    }
+  ],
+  "quantizationGuide": {
+    "q2": { "bits": 2, "size": "~75% reduction", "use": "High-RAM GPUs only, experimental" },
+    "q3": { "bits": 3, "size": "~60% reduction", "use": "Lightweight models, best compression" },
+    "q4": { "bits": 4, "size": "~50% reduction", "use": "Recommended default, best value" },
+    "q5": { "bits": 5, "size": "~40% reduction", "use": "Better accuracy, still reasonable" },
+    "q6": { "bits": 6, "size": "~25% reduction", "use": "Near full quality, good compromise" },
+    "q8": { "bits": 8, "size": "No compression", "use": "Full quality, largest file" }
+  },
+  "modelCategories": {
+    "chat": {
+      "icon": "💬",
+      "description": "General conversation, writing assistance, Q&A"
+    },
+    "coding": {
+      "icon": "💻",
+      "description": "Code generation, debugging, code review"
+    },
+    "reasoning": {
+      "icon": "🧠",
+      "description": "Math, logic, complex problem solving"
+    },
+    "vision": {
+      "icon": "👁️",
+      "description": "Image understanding, OCR, visual analysis"
+    }
+  }
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama Model Finder for Apple Silicon Mac – Local AI for M1/M2/M3/M4 | Southern Claw Labs</title>
+    <meta name="description" content="Find the perfect Ollama AI model for your Apple Mac. Filter by Apple Silicon chip (M1–M4), RAM, and use case. Local AI development for Australian Mac users — by Southern Claw Labs.">
+    <meta name="keywords" content="Ollama Mac, Apple Silicon AI, local AI development Australia, self-hosted AI assistant Australia, Ollama M1 M2 M3 M4, OpenClaw Ollama, private AI Mac, secure AI development, local LLM Mac">
+    <meta name="author" content="Southern Claw Labs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ollama-model-finder.southernclawlabs.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦾</text></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ollama Model Finder for Apple Silicon Mac | Southern Claw Labs">
+    <meta property="og:description" content="Find the perfect local AI model for your Mac. Filter by Apple Silicon chip, RAM, and use case. Built for Australian Mac users by Southern Claw Labs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ollama-model-finder.southernclawlabs.com/">
+    <meta property="og:site_name" content="Southern Claw Labs">
+    <meta property="og:locale" content="en_AU">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ollama Model Finder for Apple Silicon Mac | Southern Claw Labs">
+    <meta name="twitter:description" content="Find the perfect local AI model for your Mac. Filter by Apple Silicon chip, RAM, and use case. Built for Australian Mac users.">
+    <meta name="twitter:site" content="@southernclawlabs">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Ollama Model Finder for Apple Silicon Mac",
+        "description": "Find the perfect Ollama AI model for your Apple Mac. Filter by Apple Silicon chip (M1–M4), RAM, and use case. Built for local AI development on Australian Macs.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS",
+        "inLanguage": "en-AU",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "AUD"
+        },
+        "url": "https://ollama-model-finder.southernclawlabs.com/",
+        "author": {
+            "@type": "Organization",
+            "name": "Southern Claw Labs",
+            "url": "https://southernclawlabs.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Southern Claw Labs",
+            "url": "https://southernclawlabs.com"
+        },
+        "keywords": "Ollama, Apple Silicon, local AI, Mac, M1, M2, M3, M4, Australia, self-hosted AI, OpenClaw"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Bento Box 1: Header + Chip + Memory -->
+        <section class="bento-card bento-1">
+            <div class="header-section">
+                <h1>Ollama Model Finder for Apple Silicon Mac</h1>
+                <p class="tagline">Runs entirely on your Mac - Using Ollama + optional Ollama Cloud</p>
+                <p class="subtitle">Find the perfect model for your Mac</p>
+            </div>
+            
+            <!-- Chip Selector -->
+            <div class="selector-group">
+                <h3 class="selector-label">Chip</h3>
+                <div class="chip-buttons" role="group" aria-label="Apple Silicon chip selection">
+                    <button class="chip-btn" data-chip="M1">
+                        <span class="chip-name">M1</span>
+                        <span class="chip-years">2020</span>
+                    </button>
+                    <button class="chip-btn" data-chip="M2">
+                        <span class="chip-name">M2</span>
+                        <span class="chip-years">2022</span>
+                    </button>
+                    <button class="chip-btn" data-chip="M3">
+                        <span class="chip-name">M3</span>
+                        <span class="chip-years">2023</span>
+                    </button>
+                    <button class="chip-btn" data-chip="M4">
+                        <span class="chip-name">M4</span>
+                        <span class="chip-years">2024</span>
+                    </button>
+                    <button class="chip-btn" data-chip="M4 Pro">
+                        <span class="chip-name">M4 Pro</span>
+                        <span class="chip-years">2024</span>
+                    </button>
+                    <button class="chip-btn" data-chip="M4 Max">
+                        <span class="chip-name">M4 Max</span>
+                        <span class="chip-years">2024</span>
+                    </button>
+                    <button class="chip-btn" data-chip="M3 Ultra">
+                        <span class="chip-name">M3 Ultra</span>
+                        <span class="chip-years">2023</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- RAM Selector -->
+            <div class="selector-group">
+                <h3 class="selector-label">Memory</h3>
+                <div class="ram-buttons" role="group" aria-label="RAM tier selection">
+                    <button class="ram-btn" data-ram="16">
+                        <span class="ram-value">16</span>
+                        <span class="ram-label">GB</span>
+                    </button>
+                    <button class="ram-btn" data-ram="24">
+                        <span class="ram-value">24</span>
+                        <span class="ram-label">GB</span>
+                    </button>
+                    <button class="ram-btn" data-ram="32">
+                        <span class="ram-value">32</span>
+                        <span class="ram-label">GB</span>
+                    </button>
+                    <button class="ram-btn" data-ram="36">
+                        <span class="ram-value">36</span>
+                        <span class="ram-label">GB</span>
+                    </button>
+                    <button class="ram-btn" data-ram="48">
+                        <span class="ram-value">48</span>
+                        <span class="ram-label">GB</span>
+                    </button>
+                    <button class="ram-btn" data-ram="64">
+                        <span class="ram-value">64</span>
+                        <span class="ram-label">GB</span>
+                    </button>
+                    <button class="ram-btn" data-ram="96">
+                        <span class="ram-value">96</span>
+                        <span class="ram-label">GB</span>
+                    </button>
+                    <button class="ram-btn" data-ram="128">
+                        <span class="ram-value">128</span>
+                        <span class="ram-label">GB</span>
+                    </button>
+                    <button class="ram-btn" data-ram="192">
+                        <span class="ram-value">192</span>
+                        <span class="ram-label">GB</span>
+                    </button>
+                </div>
+                <!-- Affiliate nudge: shown when RAM is 16GB or 24GB -->
+                <div id="upgradeNudge" class="upgrade-nudge" style="display: none;">
+                    <span class="upgrade-nudge-text">Running low on RAM?</span>
+                    <a id="upgradeLink" href="https://www.apple.com/shop/buy-mac" target="_blank" rel="noopener" class="upgrade-nudge-link">
+                        View Mac upgrades →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dynamic Chip Specs in Bento Box -->
+            <div class="bento-card specs-card">
+                <h3 class="selector-label">Chip Specs</h3>
+                <div class="specs-section" id="chipSpecs">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Box 2: Filters + Run Mode -->
+        <section class="bento-card bento-2">
+            <div class="filter-row columns-2">
+                <!-- Left Column: Category + Precision -->
+                <div class="filter-column">
+                    <div class="selector-group">
+                        <h3 class="selector-label">Category</h3>
+                        <div class="filter-group">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="Chat">Chat</button>
+                            <button class="filter-btn" data-filter="Coding">Coding</button>
+                            <button class="filter-btn" data-filter="Reasoning">Reasoning</button>
+                            <button class="filter-btn" data-filter="Vision">Vision</button>
+                        </div>
+                    </div>
+                    
+                    <div class="selector-group">
+                        <h3 class="selector-label">Precision</h3>
+                        <div class="precision-filter">
+                            <button class="precision-btn active" data-precision="all">All</button>
+                            <button class="precision-btn" data-precision="standard">Full</button>
+                            <button class="precision-btn" data-precision="quantized">Quantized</button>
+                        </div>
+                        <div class="search-box" style="margin-top: 8px;">
+                            <input type="text" id="searchInput" placeholder="Search models...">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Run Mode + Quantization Dropdown -->
+                <div class="filter-column">
+                    <div class="selector-group">
+                        <h3 class="selector-label">Run Mode</h3>
+                        <div class="deployment-toggle" role="group" aria-label="Development type">
+                            <button class="deploy-btn active" data-deploy="both">Both</button>
+                            <button class="deploy-btn" data-deploy="local">Local</button>
+                            <button class="deploy-btn" data-deploy="cloud">Cloud</button>
+                        </div>
+                    </div>
+                    
+                    <div class="selector-group">
+                        <h3 class="selector-label">Quantization</h3>
+                        <select id="quantSelect" class="quant-select">
+                            <option value="">All Types</option>
+                            <option value="q2_K">q2_K</option>
+                            <option value="q3_K_S">q3_K_S</option>
+                            <option value="q3_K_M">q3_K_M</option>
+                            <option value="q3_K_L">q3_K_L</option>
+                            <option value="q4_0">q4_0</option>
+                            <option value="q4_1">q4_1</option>
+                            <option value="q4_K_S">q4_K_S</option>
+                            <option value="q4_K_M">q4_K_M</option>
+                            <option value="q5_0">q5_0</option>
+                            <option value="q5_1">q5_1</option>
+                            <option value="q5_K_S">q5_K_S</option>
+                            <option value="q5_K_M">q5_K_M</option>
+                            <option value="q6_K">q6_K</option>
+                            <option value="q8_0">q8_0</option>
+                            <option value="fp16">fp16</option>
+                            <option value="fp32">fp32</option>
+                        </select>
+                        <button class="refresh-btn" id="refreshBtn" title="Reset all filters" style="margin-top: 8px;">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Unit -->
+        <section class="ad-card">
+            <span class="ad-label">Sponsored</span>
+            <div class="ad-content">
+                <div class="ad-image">⚡</div>
+                <div class="ad-body">
+                    <span class="ad-headline">MacBook Pro with M4 Max — 128GB RAM</span>
+                    <span class="ad-description">Run the largest local AI models seamlessly. Up to 400 GB/s memory bandwidth.</span>
+                </div>
+                <a href="#" class="ad-cta">View on Apple →</a>
+            </div>
+        </section>
+
+        <!-- Bento Box 4: Results -->
+        <section class="bento-card bento-4">
+            <div class="results-header">
+                <h2 class="card-title">Results</h2>
+                <div class="stats" id="stats">Loading...</div>
+            </div>
+            <div class="models-grid" id="modelsGrid"></div>
+        </section>
+    </div>
+
+    <footer class="app-footer">
+        <span>© 2026 <a href="https://southernclawlabs.com" target="_blank" rel="noopener" class="footer-link">Southern Claw Labs</a> — Australia's local AI development specialist</span>
+        <span class="credits">
+            Powered by <a href="https://ollama.com" target="_blank" rel="noopener" class="footer-link">Ollama</a> &nbsp;·&nbsp;
+            Built for <a href="https://www.apple.com/mac/" target="_blank" rel="noopener" class="footer-link">Apple Silicon</a> &nbsp;·&nbsp;
+            Developed using <a href="https://southernclawlabs.com" target="_blank" rel="noopener" class="footer-link">OpenClaw</a> and <a href="https://claude.ai" target="_blank" rel="noopener" class="footer-link">Claude AI</a>
+        </span>
+        <span class="credits">Need help deploying local AI? <a href="https://southernclawlabs.com" target="_blank" rel="noopener" class="footer-cta">Talk to Southern Claw Labs →</a></span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
