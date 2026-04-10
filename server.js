@@ -7,7 +7,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const CACHE_FILE = path.join(__dirname, 'cache.json');
 const CACHE_TTL_MS = 15 * 60 * 1000; // 15 minutes
 
@@ -44,13 +44,24 @@ function saveCache() {
 // HTTP GET helper
 function httpsGet(url) {
     return new Promise((resolve, reject) => {
-        const req = https.get(url, (res) => {
+        const options = {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'en-AU,en;q=0.9'
+            }
+        };
+        const req = https.get(url, options, (res) => {
+            // Follow redirects
+            if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+                return httpsGet(res.headers.location).then(resolve).catch(reject);
+            }
             let data = '';
             res.on('data', chunk => data += chunk);
             res.on('end', () => resolve(data));
         });
         req.on('error', reject);
-        req.setTimeout(10000, () => {
+        req.setTimeout(15000, () => {
             req.destroy();
             reject(new Error('Request timeout'));
         });
