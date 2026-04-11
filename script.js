@@ -159,8 +159,8 @@ const chipSpecs = document.getElementById('chipSpecs');
 const refreshBtn = document.getElementById('refreshBtn');
 const upgradeNudge = document.getElementById('upgradeNudge');
 
-// Affiliate URL — replace with your Apple affiliate link once registered
-const APPLE_AFFILIATE_URL = 'https://www.apple.com/shop/buy-mac';
+// Amazon Associates AU affiliate link (southernclawl-22)
+const APPLE_AFFILIATE_URL = 'https://www.amazon.com.au/s?k=apple+mac+m4&tag=southernclawl-22';
 
 // Show or hide the upgrade nudge based on selected RAM
 function updateUpgradeNudge(ram) {
