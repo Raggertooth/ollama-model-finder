@@ -162,6 +162,66 @@ const upgradeNudge = document.getElementById('upgradeNudge');
 // Amazon Associates AU affiliate link (southernclawl-22)
 const APPLE_AFFILIATE_URL = 'https://www.amazon.com.au/s?k=apple+mac+m4&tag=southernclawl-22';
 
+// Smart Ad Card — product shown changes based on selected chip
+const AD_PRODUCTS = {
+    'M1': {
+        icon: '💾',
+        headline: 'Samsung T7 Portable SSD — 2TB',
+        description: 'Store and load Ollama models fast. Plug-and-play USB-C, works with any Mac.',
+        url: 'https://www.amazon.com.au/s?k=samsung+t7+portable+ssd+2tb&tag=southernclawl-22'
+    },
+    'M2': {
+        icon: '💾',
+        headline: 'Samsung T7 Portable SSD — 2TB',
+        description: 'Store and load Ollama models fast. Plug-and-play USB-C, works with any Mac.',
+        url: 'https://www.amazon.com.au/s?k=samsung+t7+portable+ssd+2tb&tag=southernclawl-22'
+    },
+    'M3': {
+        icon: '🔌',
+        headline: 'Anker USB-C Hub — 10-in-1 for Mac',
+        description: 'Add HDMI, USB-A, SD card, and Ethernet to your Mac. Essential for a clean AI workstation.',
+        url: 'https://www.amazon.com.au/s?k=anker+usb+c+hub+10+in+1+mac&tag=southernclawl-22'
+    },
+    'M4': {
+        icon: '🗂️',
+        headline: 'Mac Mini M4 Stand & Cradle',
+        description: 'Elevate your Mac Mini setup. Vertical stands free up desk space and improve airflow for sustained AI workloads.',
+        url: 'https://www.amazon.com.au/s?k=mac+mini+m4+stand+vertical+cradle&tag=southernclawl-22'
+    },
+    'M4 Pro': {
+        icon: '⚡',
+        headline: 'Thunderbolt 4 Dock for Mac',
+        description: 'Professional connectivity for your M4 Pro. Multiple displays, fast storage, and up to 98W charging.',
+        url: 'https://www.amazon.com.au/s?k=thunderbolt+4+dock+mac&tag=southernclawl-22'
+    },
+    'M4 Max': {
+        icon: '🚀',
+        headline: 'Thunderbolt NVMe Enclosure',
+        description: 'Maximise your M4 Max with blazing-fast external NVMe storage. Load the largest AI models instantly.',
+        url: 'https://www.amazon.com.au/s?k=thunderbolt+nvme+enclosure+mac&tag=southernclawl-22'
+    },
+    'M3 Ultra': {
+        icon: '🔥',
+        headline: 'Thunderbolt NVMe RAID Enclosure',
+        description: 'Ultra-fast storage for an ultra-powerful Mac. High-speed RAID for massive AI model libraries.',
+        url: 'https://www.amazon.com.au/s?k=thunderbolt+nvme+raid+enclosure+mac&tag=southernclawl-22'
+    }
+};
+
+// Update the ad card content based on selected chip
+function updateAdCard(chip) {
+    const product = AD_PRODUCTS[chip] || AD_PRODUCTS['M4'];
+    const adImage = document.getElementById('adImage');
+    const adHeadline = document.getElementById('adHeadline');
+    const adDescription = document.getElementById('adDescription');
+    const adCta = document.getElementById('adCta');
+
+    if (adImage) adImage.textContent = product.icon;
+    if (adHeadline) adHeadline.textContent = product.headline;
+    if (adDescription) adDescription.textContent = product.description;
+    if (adCta) adCta.href = product.url;
+}
+
 // Show or hide the upgrade nudge based on selected RAM
 function updateUpgradeNudge(ram) {
     if (ram <= 24) {
@@ -583,6 +643,7 @@ chipButtons.forEach(btn => {
         btn.classList.add('selected');
         currentChip = btn.dataset.chip;
         renderChipSpecs(currentChip);
+        updateAdCard(currentChip);
         filterAndDisplay();
     });
 });
@@ -675,6 +736,9 @@ refreshBtn.addEventListener('click', async () => {
     // Reset nudge (default RAM is 32GB — no nudge)
     updateUpgradeNudge(currentRAM);
 
+    // Reset ad card to default chip (M3)
+    updateAdCard(currentChip);
+
     // Re-fetch models from backend
     await fetchModels();
 });
@@ -686,5 +750,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(`.ram-btn[data-ram="${currentRAM}"]`)?.classList.add('selected');
     updateUpgradeNudge(currentRAM);
     renderChipSpecs(currentChip);
+    updateAdCard(currentChip);
     fetchModels();
 });
