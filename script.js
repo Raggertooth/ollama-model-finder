@@ -162,55 +162,60 @@ const upgradeNudge = document.getElementById('upgradeNudge');
 // Amazon Associates AU affiliate link (southernclawl-22)
 const APPLE_AFFILIATE_URL = 'https://www.amazon.com.au/s?k=apple+mac+m4&tag=southernclawl-22';
 
-// Smart Ad Card — product shown changes based on selected chip
-const AD_PRODUCTS = {
-    'M1': {
-        icon: '🖥️',
-        headline: 'BenQ MA270U 27" 4K Monitor for Mac',
-        description: 'Dual USB-C with 90W Power Delivery. 3840x2160 — crisp, colour-accurate display designed specifically for MacBook Pro and Air.',
-        url: 'https://www.amazon.com.au/dp/B0DFB26FD8?tag=southernclawl-22'
-    },
-    'M2': {
-        icon: '🖥️',
-        headline: 'BenQ MA270U 27" 4K Monitor for Mac',
-        description: 'Dual USB-C with 90W Power Delivery. 3840x2160 — crisp, colour-accurate display designed specifically for MacBook Pro and Air.',
-        url: 'https://www.amazon.com.au/dp/B0DFB26FD8?tag=southernclawl-22'
-    },
-    'M3': {
-        icon: '🖥️',
-        headline: 'BenQ MA270U 27" 4K Monitor for Mac',
-        description: 'Dual USB-C with 90W Power Delivery. 3840x2160 — crisp, colour-accurate display designed specifically for MacBook Pro and Air.',
-        url: 'https://www.amazon.com.au/dp/B0DFB26FD8?tag=southernclawl-22'
-    },
-    'M4': {
-        icon: '🗂️',
-        headline: 'UGREEN Mac Mini M4 Dock & Stand — 10 Ports',
-        description: '8K DisplayPort, built-in M.2 NVMe SSD enclosure, USB-C/A 10Gbps, SD/TF card & audio. The all-in-one hub for your Mac Mini M4.',
-        url: 'https://www.amazon.com.au/dp/B0DSJ633D8?tag=southernclawl-22'
-    },
-    'M4 Pro': {
-        icon: '🗂️',
-        headline: 'Hagibis Mac Mini M4 Pro Hub & Stand — MC60H',
-        description: '3-in-1 dock with M.2 NVMe SSD enclosure, 4K@60Hz HDMI, 10Gbps USB 3.2, SD 4.0/TF 4.0 and 5V power. Built specifically for Mac Mini M4 Pro.',
-        url: 'https://www.amazon.com.au/dp/B0DP8VFWHR?tag=southernclawl-22'
-    },
-    'M4 Max': {
-        icon: '💿',
-        headline: 'Samsung 990 PRO 1TB M.2 NVMe SSD',
-        description: 'PCIe 4.0 NVMe for your M4 Max setup. Load the largest Ollama models instantly — pairs perfectly with any M.2 dock or enclosure.',
-        url: 'https://www.amazon.com.au/dp/B0B9C3ZVHR?tag=southernclawl-22'
-    },
-    'M3 Ultra': {
-        icon: '💿',
-        headline: 'Samsung 990 PRO 2TB M.2 NVMe SSD',
-        description: 'PCIe 4.0 NVMe at scale. 2TB for your M3 Ultra — store an entire library of large Ollama models and load them instantly.',
-        url: 'https://www.amazon.com.au/dp/B0B9C4DKKG?tag=southernclawl-22'
-    }
+// Smart Ad Card — each chip has a pool of products, rotated randomly on chip selection
+const BENQ_MONITOR = {
+    icon: '🖥️',
+    headline: 'BenQ MA270U 27" 4K Monitor for Mac',
+    description: 'Dual USB-C with 90W Power Delivery. 3840x2160 — crisp, colour-accurate display built for Mac developers.',
+    url: 'https://www.amazon.com.au/dp/B0DFB26FD8?tag=southernclawl-22'
 };
 
-// Update the ad card content based on selected chip
+const AD_PRODUCTS = {
+    'M1': [ BENQ_MONITOR ],
+    'M2': [ BENQ_MONITOR ],
+    'M3': [ BENQ_MONITOR ],
+    'M4': [
+        {
+            icon: '🗂️',
+            headline: 'UGREEN Mac Mini M4 Dock & Stand — 10 Ports',
+            description: '8K DisplayPort, built-in M.2 NVMe SSD enclosure, USB-C/A 10Gbps, SD/TF card & audio. The all-in-one hub for your Mac Mini M4.',
+            url: 'https://www.amazon.com.au/dp/B0DSJ633D8?tag=southernclawl-22'
+        },
+        BENQ_MONITOR
+    ],
+    'M4 Pro': [
+        {
+            icon: '🗂️',
+            headline: 'Hagibis Mac Mini M4 Pro Hub & Stand — MC60H',
+            description: '3-in-1 dock with M.2 NVMe SSD enclosure, 4K@60Hz HDMI, 10Gbps USB 3.2, SD 4.0/TF 4.0 and 5V power. Built specifically for Mac Mini M4 Pro.',
+            url: 'https://www.amazon.com.au/dp/B0DP8VFWHR?tag=southernclawl-22'
+        },
+        BENQ_MONITOR
+    ],
+    'M4 Max': [
+        {
+            icon: '💿',
+            headline: 'Samsung 990 PRO 1TB M.2 NVMe SSD',
+            description: 'PCIe 4.0 NVMe for your M4 Max setup. Load the largest Ollama models instantly — pairs perfectly with any M.2 dock or enclosure.',
+            url: 'https://www.amazon.com.au/dp/B0B9C3ZVHR?tag=southernclawl-22'
+        },
+        BENQ_MONITOR
+    ],
+    'M3 Ultra': [
+        {
+            icon: '💿',
+            headline: 'Samsung 990 PRO 2TB M.2 NVMe SSD',
+            description: 'PCIe 4.0 NVMe at scale. 2TB for your M3 Ultra — store an entire library of large Ollama models and load them instantly.',
+            url: 'https://www.amazon.com.au/dp/B0B9C4DKKG?tag=southernclawl-22'
+        },
+        BENQ_MONITOR
+    ]
+};
+
+// Update the ad card — picks randomly from the chip's product pool
 function updateAdCard(chip) {
-    const product = AD_PRODUCTS[chip] || AD_PRODUCTS['M4'];
+    const pool = AD_PRODUCTS[chip] || AD_PRODUCTS['M4'];
+    const product = pool[Math.floor(Math.random() * pool.length)];
     const adImage = document.getElementById('adImage');
     const adHeadline = document.getElementById('adHeadline');
     const adDescription = document.getElementById('adDescription');
