@@ -163,6 +163,13 @@ const upgradeNudge = document.getElementById('upgradeNudge');
 const APPLE_AFFILIATE_URL = 'https://www.amazon.com.au/s?k=apple+mac+m4&tag=southernclawl-22';
 
 // Smart Ad Card — each chip has a pool of products, rotated randomly on chip selection
+const HUANUO_DUAL_ARM = {
+    icon: '🖥️',
+    headline: 'HUANUO Dual Monitor Arm — Gas Spring HNDS6',
+    description: 'Full adjustable dual mount for 13–32" screens, C-clamp & grommet base. Perfect for a two-monitor Mac developer setup.',
+    url: 'https://www.amazon.com.au/dp/B07ZNGT8K4?tag=southernclawl-22'
+};
+
 const BENQ_ARM = {
     icon: '🦾',
     headline: 'BenQ BSH02 Ergo Monitor Arm — Gas Spring',
@@ -185,9 +192,9 @@ const BENQ_32 = {
 };
 
 const AD_PRODUCTS = {
-    'M1': [ BENQ_27, BENQ_32, BENQ_ARM ],
-    'M2': [ BENQ_27, BENQ_32, BENQ_ARM ],
-    'M3': [ BENQ_27, BENQ_32, BENQ_ARM ],
+    'M1': [ BENQ_27, BENQ_32, BENQ_ARM, HUANUO_DUAL_ARM ],
+    'M2': [ BENQ_27, BENQ_32, BENQ_ARM, HUANUO_DUAL_ARM ],
+    'M3': [ BENQ_27, BENQ_32, BENQ_ARM, HUANUO_DUAL_ARM ],
     'M4': [
         {
             icon: '🗂️',
@@ -195,7 +202,7 @@ const AD_PRODUCTS = {
             description: '8K DisplayPort, built-in M.2 NVMe SSD enclosure, USB-C/A 10Gbps, SD/TF card & audio. The all-in-one hub for your Mac Mini M4.',
             url: 'https://www.amazon.com.au/dp/B0DSJ633D8?tag=southernclawl-22'
         },
-        BENQ_27, BENQ_32, BENQ_ARM
+        BENQ_27, BENQ_32, BENQ_ARM, HUANUO_DUAL_ARM
     ],
     'M4 Pro': [
         {
@@ -204,7 +211,7 @@ const AD_PRODUCTS = {
             description: '3-in-1 dock with M.2 NVMe SSD enclosure, 4K@60Hz HDMI, 10Gbps USB 3.2, SD 4.0/TF 4.0 and 5V power. Built specifically for Mac Mini M4 Pro.',
             url: 'https://www.amazon.com.au/dp/B0DP8VFWHR?tag=southernclawl-22'
         },
-        BENQ_27, BENQ_32, BENQ_ARM
+        BENQ_27, BENQ_32, BENQ_ARM, HUANUO_DUAL_ARM
     ],
     'M4 Max': [
         {
@@ -213,7 +220,7 @@ const AD_PRODUCTS = {
             description: 'PCIe 4.0 NVMe for your M4 Max setup. Load the largest Ollama models instantly — pairs perfectly with any M.2 dock or enclosure.',
             url: 'https://www.amazon.com.au/dp/B0B9C3ZVHR?tag=southernclawl-22'
         },
-        BENQ_27, BENQ_32, BENQ_ARM
+        BENQ_27, BENQ_32, BENQ_ARM, HUANUO_DUAL_ARM
     ],
     'M3 Ultra': [
         {
@@ -222,7 +229,7 @@ const AD_PRODUCTS = {
             description: 'PCIe 4.0 NVMe at scale. 2TB for your M3 Ultra — store an entire library of large Ollama models and load them instantly.',
             url: 'https://www.amazon.com.au/dp/B0B9C4DKKG?tag=southernclawl-22'
         },
-        BENQ_27, BENQ_32, BENQ_ARM
+        BENQ_27, BENQ_32, BENQ_ARM, HUANUO_DUAL_ARM
     ]
 };
 
