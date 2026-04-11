@@ -184,9 +184,9 @@ const AD_PRODUCTS = {
     },
     'M4': {
         icon: '🗂️',
-        headline: 'Mac Mini M4 Stand & Cradle',
-        description: 'Elevate your Mac Mini setup. Vertical stands free up desk space and improve airflow for sustained AI workloads.',
-        url: 'https://www.amazon.com.au/s?k=mac+mini+m4+stand+vertical+cradle&tag=southernclawl-22'
+        headline: 'UGREEN Mac Mini M4 Dock & Stand — 10 Ports',
+        description: '8K DisplayPort, built-in M.2 NVMe SSD enclosure, USB-C/A 10Gbps, SD/TF card & audio. The all-in-one hub for your Mac Mini M4.',
+        url: 'https://www.amazon.com.au/dp/B0DSJ633D8?tag=southernclawl-22'
     },
     'M4 Pro': {
         icon: '⚡',
