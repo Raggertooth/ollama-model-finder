@@ -165,22 +165,22 @@ const APPLE_AFFILIATE_URL = 'https://www.amazon.com.au/s?k=apple+mac+m4&tag=sout
 // Smart Ad Card — product shown changes based on selected chip
 const AD_PRODUCTS = {
     'M1': {
-        icon: '💾',
-        headline: 'Samsung T7 Portable SSD — 2TB',
-        description: 'Store and load Ollama models fast. Plug-and-play USB-C, works with any Mac.',
-        url: 'https://www.amazon.com.au/s?k=samsung+t7+portable+ssd+2tb&tag=southernclawl-22'
+        icon: '🖥️',
+        headline: 'BenQ MA270U 27" 4K Monitor for Mac',
+        description: 'Dual USB-C with 90W Power Delivery. 3840x2160 — crisp, colour-accurate display designed specifically for MacBook Pro and Air.',
+        url: 'https://www.amazon.com.au/dp/B0DFB26FD8?tag=southernclawl-22'
     },
     'M2': {
-        icon: '💾',
-        headline: 'Samsung T7 Portable SSD — 2TB',
-        description: 'Store and load Ollama models fast. Plug-and-play USB-C, works with any Mac.',
-        url: 'https://www.amazon.com.au/s?k=samsung+t7+portable+ssd+2tb&tag=southernclawl-22'
+        icon: '🖥️',
+        headline: 'BenQ MA270U 27" 4K Monitor for Mac',
+        description: 'Dual USB-C with 90W Power Delivery. 3840x2160 — crisp, colour-accurate display designed specifically for MacBook Pro and Air.',
+        url: 'https://www.amazon.com.au/dp/B0DFB26FD8?tag=southernclawl-22'
     },
     'M3': {
-        icon: '🔌',
-        headline: 'Anker USB-C Hub — 10-in-1 for Mac',
-        description: 'Add HDMI, USB-A, SD card, and Ethernet to your Mac. Essential for a clean AI workstation.',
-        url: 'https://www.amazon.com.au/s?k=anker+usb+c+hub+10+in+1+mac&tag=southernclawl-22'
+        icon: '🖥️',
+        headline: 'BenQ MA270U 27" 4K Monitor for Mac',
+        description: 'Dual USB-C with 90W Power Delivery. 3840x2160 — crisp, colour-accurate display designed specifically for MacBook Pro and Air.',
+        url: 'https://www.amazon.com.au/dp/B0DFB26FD8?tag=southernclawl-22'
     },
     'M4': {
         icon: '🗂️',
