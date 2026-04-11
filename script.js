@@ -189,10 +189,10 @@ const AD_PRODUCTS = {
         url: 'https://www.amazon.com.au/dp/B0DSJ633D8?tag=southernclawl-22'
     },
     'M4 Pro': {
-        icon: '⚡',
-        headline: 'Thunderbolt 4 Dock for Mac',
-        description: 'Professional connectivity for your M4 Pro. Multiple displays, fast storage, and up to 98W charging.',
-        url: 'https://www.amazon.com.au/s?k=thunderbolt+4+dock+mac&tag=southernclawl-22'
+        icon: '💿',
+        headline: 'Samsung 990 PRO 1TB M.2 NVMe SSD',
+        description: 'PCIe 4.0 NVMe speed for your Mac Mini M4 Pro. Slots directly into the UGREEN dock M.2 bay — store and load large AI models instantly.',
+        url: 'https://www.amazon.com.au/s?k=Samsung+990+PRO+1TB+NVMe+MZ-V9P1T0BW&tag=southernclawl-22'
     },
     'M4 Max': {
         icon: '🚀',
