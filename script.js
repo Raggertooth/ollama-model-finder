@@ -201,10 +201,10 @@ const AD_PRODUCTS = {
         url: 'https://www.amazon.com.au/dp/B0B9C3ZVHR?tag=southernclawl-22'
     },
     'M3 Ultra': {
-        icon: '🔥',
-        headline: 'Thunderbolt NVMe RAID Enclosure',
-        description: 'Ultra-fast storage for an ultra-powerful Mac. High-speed RAID for massive AI model libraries.',
-        url: 'https://www.amazon.com.au/s?k=thunderbolt+nvme+raid+enclosure+mac&tag=southernclawl-22'
+        icon: '💿',
+        headline: 'Samsung 990 PRO 2TB M.2 NVMe SSD',
+        description: 'PCIe 4.0 NVMe at scale. 2TB for your M3 Ultra — store an entire library of large Ollama models and load them instantly.',
+        url: 'https://www.amazon.com.au/dp/B0B9C4DKKG?tag=southernclawl-22'
     }
 };
 
