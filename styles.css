@@ -1067,53 +1067,160 @@ footer {
 /* Mobile Responsive */
 @media (max-width: 640px) {
     body {
-        padding: 24px 16px;
+        padding: 16px 12px;
     }
 
+    /* Header */
+    .header-section h1,
     header h1 {
-        font-size: 1.875rem;
+        font-size: 1.5rem;
+        letter-spacing: -0.01em;
     }
 
-    .ram-selector-section {
-        padding: 32px 20px;
+    .header-section .subtitle {
+        font-size: 0.9375rem;
     }
 
-    .ram-buttons {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .ram-btn {
-        padding: 24px 16px;
-    }
-
-    .ram-value {
-        font-size: 1.75rem;
-    }
-
-    .ram-label {
+    .header-section .tagline {
         font-size: 0.8125rem;
     }
 
+    /* Bento cards — reduce padding */
+    .bento-card {
+        padding: 16px;
+    }
+
+    /* Chip buttons — 3 per row on mobile */
+    .chip-buttons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .chip-btn {
+        padding: 12px 8px;
+        min-width: unset;
+    }
+
+    .chip-name {
+        font-size: 0.875rem;
+    }
+
+    /* Specs grid — 3 per row on mobile */
+    .specs-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    /* RAM buttons — 3 per row on mobile */
+    .ram-buttons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .ram-btn {
+        padding: 12px 8px;
+        min-width: unset;
+    }
+
+    .ram-value {
+        font-size: 1rem;
+    }
+
+    .ram-label {
+        font-size: 0.75rem;
+    }
+
+    /* Filters — stack to single column */
+    .filter-row.columns-2 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Search box — full width */
+    .search-box {
+        min-width: 0;
+        max-width: none;
+        flex: 1;
+    }
+
+    /* Quant select + Reset — full width */
+    .quant-select {
+        min-width: 0;
+        max-width: none;
+        width: 100%;
+    }
+
+    .refresh-btn {
+        min-width: 0;
+        max-width: none;
+        width: 100%;
+    }
+
+    /* Secondary controls */
     .secondary-controls {
         flex-direction: column;
         align-items: stretch;
     }
 
     .filter-group {
-        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .search-box {
-        max-width: none;
-    }
-
+    /* Results section */
     .results-section {
-        padding: 24px 16px;
+        padding: 16px 12px;
     }
 
     .models-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Ad card — stack on mobile */
+    .ad-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .ad-cta {
+        align-self: flex-start;
+    }
+
+    /* Footer — stack lines */
+    .app-footer {
+        font-size: 0.75rem;
+        padding: 16px 12px;
+    }
+
+    .app-footer .credits {
+        font-size: 0.6875rem;
+        margin-top: 6px;
+    }
+
+    /* Upgrade nudge */
+    .upgrade-nudge {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
+
+/* Extra small screens (iPhone SE etc) */
+@media (max-width: 390px) {
+    .chip-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ram-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header-section h1 {
+        font-size: 1.25rem;
+    }
+
+    .specs-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 /* Show Quantizations Button */
