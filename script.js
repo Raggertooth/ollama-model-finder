@@ -198,7 +198,7 @@ const AD_PRODUCTS = {
         icon: '💿',
         headline: 'Samsung 990 PRO 1TB M.2 NVMe SSD',
         description: 'PCIe 4.0 NVMe for your M4 Max setup. Load the largest Ollama models instantly — pairs perfectly with any M.2 dock or enclosure.',
-        url: 'https://www.amazon.com.au/s?k=Samsung+990+PRO+1TB+NVMe+MZ-V9P1T0BW&tag=southernclawl-22'
+        url: 'https://www.amazon.com.au/dp/B0B9C3ZVHR?tag=southernclawl-22'
     },
     'M3 Ultra': {
         icon: '🔥',
