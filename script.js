@@ -163,17 +163,24 @@ const upgradeNudge = document.getElementById('upgradeNudge');
 const APPLE_AFFILIATE_URL = 'https://www.amazon.com.au/s?k=apple+mac+m4&tag=southernclawl-22';
 
 // Smart Ad Card — each chip has a pool of products, rotated randomly on chip selection
-const BENQ_MONITOR = {
+const BENQ_27 = {
     icon: '🖥️',
     headline: 'BenQ MA270U 27" 4K Monitor for Mac',
     description: 'Dual USB-C with 90W Power Delivery. 3840x2160 — crisp, colour-accurate display built for Mac developers.',
     url: 'https://www.amazon.com.au/dp/B0DFB26FD8?tag=southernclawl-22'
 };
 
+const BENQ_32 = {
+    icon: '🖥️',
+    headline: 'BenQ MA320U 31.5" 4K Monitor for Mac',
+    description: 'Dual USB-C, 90W Power Delivery, Mac Colour Match, P3 wide gamut, height-adjustable stand. The ultimate large-screen Mac developer display.',
+    url: 'https://www.amazon.com.au/dp/B0DBBD6LB3?tag=southernclawl-22'
+};
+
 const AD_PRODUCTS = {
-    'M1': [ BENQ_MONITOR ],
-    'M2': [ BENQ_MONITOR ],
-    'M3': [ BENQ_MONITOR ],
+    'M1': [ BENQ_27, BENQ_32 ],
+    'M2': [ BENQ_27, BENQ_32 ],
+    'M3': [ BENQ_27, BENQ_32 ],
     'M4': [
         {
             icon: '🗂️',
@@ -181,7 +188,8 @@ const AD_PRODUCTS = {
             description: '8K DisplayPort, built-in M.2 NVMe SSD enclosure, USB-C/A 10Gbps, SD/TF card & audio. The all-in-one hub for your Mac Mini M4.',
             url: 'https://www.amazon.com.au/dp/B0DSJ633D8?tag=southernclawl-22'
         },
-        BENQ_MONITOR
+        BENQ_27,
+        BENQ_32
     ],
     'M4 Pro': [
         {
@@ -190,7 +198,8 @@ const AD_PRODUCTS = {
             description: '3-in-1 dock with M.2 NVMe SSD enclosure, 4K@60Hz HDMI, 10Gbps USB 3.2, SD 4.0/TF 4.0 and 5V power. Built specifically for Mac Mini M4 Pro.',
             url: 'https://www.amazon.com.au/dp/B0DP8VFWHR?tag=southernclawl-22'
         },
-        BENQ_MONITOR
+        BENQ_27,
+        BENQ_32
     ],
     'M4 Max': [
         {
@@ -199,7 +208,8 @@ const AD_PRODUCTS = {
             description: 'PCIe 4.0 NVMe for your M4 Max setup. Load the largest Ollama models instantly — pairs perfectly with any M.2 dock or enclosure.',
             url: 'https://www.amazon.com.au/dp/B0B9C3ZVHR?tag=southernclawl-22'
         },
-        BENQ_MONITOR
+        BENQ_27,
+        BENQ_32
     ],
     'M3 Ultra': [
         {
@@ -208,7 +218,8 @@ const AD_PRODUCTS = {
             description: 'PCIe 4.0 NVMe at scale. 2TB for your M3 Ultra — store an entire library of large Ollama models and load them instantly.',
             url: 'https://www.amazon.com.au/dp/B0B9C4DKKG?tag=southernclawl-22'
         },
-        BENQ_MONITOR
+        BENQ_27,
+        BENQ_32
     ]
 };
 
