@@ -189,16 +189,16 @@ const AD_PRODUCTS = {
         url: 'https://www.amazon.com.au/dp/B0DSJ633D8?tag=southernclawl-22'
     },
     'M4 Pro': {
-        icon: '💿',
-        headline: 'Samsung 990 PRO 1TB M.2 NVMe SSD',
-        description: 'PCIe 4.0 NVMe speed for your Mac Mini M4 Pro. Slots directly into the UGREEN dock M.2 bay — store and load large AI models instantly.',
-        url: 'https://www.amazon.com.au/s?k=Samsung+990+PRO+1TB+NVMe+MZ-V9P1T0BW&tag=southernclawl-22'
+        icon: '🗂️',
+        headline: 'Hagibis Mac Mini M4 Pro Hub & Stand — MC60H',
+        description: '3-in-1 dock with M.2 NVMe SSD enclosure, 4K@60Hz HDMI, 10Gbps USB 3.2, SD 4.0/TF 4.0 and 5V power. Built specifically for Mac Mini M4 Pro.',
+        url: 'https://www.amazon.com.au/dp/B0DP8VFWHR?tag=southernclawl-22'
     },
     'M4 Max': {
-        icon: '🚀',
-        headline: 'Thunderbolt NVMe Enclosure',
-        description: 'Maximise your M4 Max with blazing-fast external NVMe storage. Load the largest AI models instantly.',
-        url: 'https://www.amazon.com.au/s?k=thunderbolt+nvme+enclosure+mac&tag=southernclawl-22'
+        icon: '💿',
+        headline: 'Samsung 990 PRO 1TB M.2 NVMe SSD',
+        description: 'PCIe 4.0 NVMe for your M4 Max setup. Load the largest Ollama models instantly — pairs perfectly with any M.2 dock or enclosure.',
+        url: 'https://www.amazon.com.au/s?k=Samsung+990+PRO+1TB+NVMe+MZ-V9P1T0BW&tag=southernclawl-22'
     },
     'M3 Ultra': {
         icon: '🔥',
